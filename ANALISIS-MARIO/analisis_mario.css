@@ -1,0 +1,819 @@
+
+*{
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-weight: normal;
+	font-family: edit;
+	scroll-behavior: smooth;
+}
+
+
+h1{ font-size: clamp(2.8rem, 0.96rem + 0.18vw, 1.125rem); }
+h2,a{ font-size: clamp(1.5rem, 0.96rem + 0.18vw, 1.125rem); }
+p,span,h3{ font-size: clamp(1.5rem, 0.96rem + 0.18vw, 1.125rem); }
+i,li{ font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem); }
+
+body{
+
+	block-size: max-content;
+}
+
+body::-webkit-scrollbar {
+
+ 	width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+
+	background: #080e2f;
+}
+
+body::-webkit-scrollbar-thumb {
+
+	background-color: #ffae03;
+}
+
+@font-face {
+
+	font-family: 'Edit';
+	src: url(FUENTE/editundo.ttf);
+}
+
+@font-face {
+
+	font-family: 'minecraft';
+	src: url(FUENTE/Windows-Regular.ttf);
+}
+
+p{
+
+	font-family: 'minecraft';
+	letter-spacing: 1.5px;
+}
+
+
+header{
+
+	background-color: #080e2f;
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+
+header nav{
+
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+header nav h2{
+
+	display: none;
+}
+
+header nav .lista{
+
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5%;
+	height: 30%;
+}
+
+header nav .lista li{
+
+	list-style: none;
+}
+
+header nav .lista li a{
+
+	text-decoration: none;
+	color: #fff;
+}
+
+.burguer-boton{
+
+	display: none;
+	color: #fff;
+}
+
+.portada{
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background-image: url("RECURSOS MARIO/portada.png");
+	background-position: 20%;
+	background-size: cover;
+	height: 100vh;
+}
+
+.portada .fondo{
+
+	grid-column: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5%;
+	background-color: rgba(8, 14, 47, 0.7);
+	font-family: edit;
+	color: #fff;
+	padding: 0 10%;
+}
+
+.genero{
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 5%;
+}
+
+.boton{
+
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffae03;
+	min-width: 25%;
+	height: 100%;
+	clip-path: polygon(0% 36%, 13% 36%, 13% 20%, 24% 20%, 24% 4.5%, 77.31% 4.5%, 77.31% 17%, 89% 17%, 89% 36%, 100% 36%, 100% 67%, 89% 67%, 89% 80%, 79% 80%, 79% 94.3%, 24% 94.3%, 24% 80%, 14% 80%, 14% 67%, 0% 67%);
+	padding: 5%;
+}
+
+.boton span{
+
+	position: absolute;
+	color: #fff;
+}
+
+.portada .fondo p{
+
+	font-weight: normal;
+}
+
+.portada .fondo a{
+
+	background-color: #ffae03;
+	padding: clamp(1rem, 1rem + 2vw, 1rem) clamp(2rem, 3.2rem + 2.89vw, 2rem);
+	width: 30%;
+	color: #fff;
+	font-weight: normal;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	margin-left: 40%;
+}
+
+
+
+.dado{
+
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: minmax(max-content, 20%) 1fr minmax(max-content, 20%);
+	line-height: 1.7;
+}
+
+.dado article{
+
+	grid-column: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5%;
+	gap: 40px;
+}
+
+.dado article img{
+
+	width: 30%;
+}
+
+.dado article p{
+
+	font-family: 'minecraft';
+	margin-bottom: 5%;
+}
+
+.mpan{
+
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	gap: 1%;
+}
+
+.mpan div{
+
+	display: flex;
+
+}
+
+.mpan a{
+
+	text-decoration: none;
+	color: #080e2f;
+	font-family: 'minecraft';
+	font-size: 16px;
+}
+
+.mpan h4{
+
+	color: #ffae03;
+	font-family: 'minecraft';
+}
+
+.fecha{
+
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	padding-bottom: 5%;
+}
+
+.rrss{
+
+	display: flex;
+	gap: 10px;
+	align-items: flex-end;
+}
+
+.rrss a{
+
+	color: #727272;
+}
+
+.raices{
+
+	grid-column: 2;
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5%;
+}
+
+.raices img{
+
+	width: 100%;
+}
+
+.raices p{
+
+	margin-bottom: 3%;
+}
+
+.final .volver{
+
+	display: flex;
+	justify-content: space-around;
+}
+
+.final .volver a{
+
+	color: #ffae03;
+	margin-bottom: 5%;
+	text-decoration: none;
+	background-color: #ffae03;
+  color: #fff;
+  padding: 20px;
+}
+
+footer{
+
+	background-color: #080e2f;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding: 0 3%;
+}
+
+footer div{
+
+	width: 30%;
+	display: flex;
+}
+
+.logofooter{
+
+	display: none;
+}
+
+.icon-foot{
+
+	display: flex;
+	justify-content: flex-end;
+}
+
+.icon-foot a{
+
+	color: #fff;
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.btn-flotante{
+
+	position: fixed;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	background-color: #080e2f;
+	padding: 20px;
+	bottom: 10%;
+	left: 92%;
+	text-decoration: none;
+	color: #ffae03;
+	cursor: pointer;
+	z-index: 0;
+}
+
+.analisis{
+
+	width: 100%;
+	clip-path: polygon(0% 12.89%, 8% 12.89%, 8% 6.64%, 17.38% 6.64%, 17.38% 0%, 83.59% 0%, 83.59% 6.64%, 92.72% 6.64%, 92.72% 12.89%, 100% 12.89%, 100% 100%, 0% 100%);
+	background-color: #8c6310;
+	grid-column: 2;
+}
+
+.analisis article{
+
+	display: grid;
+	padding: clamp(2.1rem, 0rem + 1vw, 1rem) clamp(0.1rem, 2.2rem + 2.89vw, 2rem);
+	margin: 0;
+	gap: clamp(1rem, 0.96rem + 0.18vw, 1.125rem) clamp(9rem, 0.96rem + 0.18vw, 1.125rem);
+}
+
+.puntuacion-start{
+
+	font-family: 'minecraft';
+	color: #fff;
+	margin-bottom: 0;
+	letter-spacing: 1.5px;
+}
+
+.puntuacion-start span{
+
+	font-family: 'minecraft';
+	color: #ffae03;
+}
+
+.analisis .puntuacion{
+
+	height: 100%;
+	width: 100%;
+	background-image: url("RECURSOS MARIO/PUNTUACIÓN.svg");
+	background-position: 47% 50%;
+	background-size: auto;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	grid-column: 2;
+	grid-row: 1/3;
+}
+
+.analisis .puntuacion h1{
+
+	display: flex;
+	align-items: center;	
+	justify-content: center;
+	height: 100%;
+	color: #fff;
+	font-size: calc(0.7em + 2vw);
+	padding: clamp(1.5rem, 0.96rem + 0.18vw, 1.125rem);
+}
+
+
+.analisis2{
+
+	width: 100%;
+	clip-path: polygon(0% 81.92%, 8% 81.92%, 8% 91.12%, 17.38% 91.12%, 17.38% 100%, 83.59% 100%, 83.59% 90.87%, 92.72% 90.87%, 92.72% 81.92%, 100% 81.92%, 100% 0%, 0% 0%);
+	background-color: #ffae03;
+	grid-column: 2;
+	margin-bottom: 5%;
+	padding: clamp(1rem, 1rem + 2vw, 1rem) clamp(2rem, 3.2rem + 2.89vw, 2rem);
+	padding-bottom: 7%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: repeat(3, 70px);
+	gap: 0;
+}
+
+.analisis2 div{
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 0;
+	gap: 10px;
+	padding: 10px;
+}
+
+.estrellas{
+
+	font-size: clamp(1.3rem, 0.96rem + 0.18vw, 1.125rem);
+}
+
+.analisis2 div h3{
+
+	font-family: 'minecraft';
+	color: #fff;
+	letter-spacing: 1.5px;
+}
+
+.destaca-flojea{
+
+	width: 100%;
+	display: grid;
+	grid-column: 2;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 30px repeat(3, 70px);
+	padding: clamp(5.375rem, 3.2rem + 2.89vw, 2rem) clamp(3.375rem, 1.2rem + 0.89vw, 2rem);
+	gap: clamp(1.375rem, 1.2rem + -0.11vw, 2rem) clamp(1.375rem, 0.2rem + 0.89vw, 2rem);
+	clip-path: polygon(0% 15.25%, 8.74% 15.25%, 8.74% 7.63%, 17.08% 7.63%, 17.08% 0%, 81.88% 0%, 81.88% 7.63%, 91.77% 7.63%, 91.77% 15.25%, 100% 15.25%, 100% 84.71%, 91.77% 84.71%, 91.77% 92.63%, 81.88% 92.63%, 81.88% 100%, 17.08% 100%, 17.08% 92.63%, 8.74% 92.63%, 8.72% 85.5%, 0% 85.5%);
+	background-color: #080e2f;
+	margin-bottom: 5%;
+}
+
+.destaca-flojea h2{
+
+	display: none;
+}
+
+.destaca-flojea div{
+
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	gap: 10px;
+}
+
+.destaca-flojea div i{
+
+	color: #ffae03;
+}
+
+.destaca-flojea div p{
+
+	font-family: 'minecraft';
+	color: #fff;
+	font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+}
+
+
+@media only screen and (max-width: 800px) {
+
+	*{
+
+		overflow-x: hidden;
+	}
+
+	header{
+
+		height: 5%;
+		display: flex;
+		align-items: center;
+		position: fixed;
+		z-index: 1;
+	}
+
+	header nav{
+
+		display: flex;
+		align-items: center;
+		padding: 0 5%;
+	}
+
+	header nav .lista{
+
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10% 0;
+	}
+
+	header nav .lista li{
+
+		text-align: center;
+	}
+
+	header nav h2{
+
+		display: inline-block;
+		color: #fff;
+		font-weight: normal;
+	}
+
+	.portada{
+
+		grid-template-columns: 1fr;
+		grid-template-rows: minmax(max-content, 30%) minmax(max-content, 70%);
+	}
+
+	.portada .fondo{
+
+		grid-row: 2;
+		padding: 0;
+		font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+		padding: 20px;
+	}
+
+	.portada .fondo a{
+
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.dado{
+
+		grid-template-columns: 1fr;
+		width: clamp(16rem, 90vw, 70rem);
+ 		margin-left: auto;
+  	margin-right: auto;
+  	padding-left: 1.5rem;
+  	padding-right: 1.5rem;
+	}
+
+	.genero h1{
+
+		text-align: right;
+	}
+
+	.raices h1,h2{
+
+		text-align: center;
+	}
+
+	.burguer-boton{
+
+		display: inline-block;
+		cursor: pointer;
+		color: #fff;
+	}
+
+	.enlacevideo{
+
+		display: none;
+	}
+
+	.lista{
+
+		flex-direction: column;
+		position: fixed;
+		top: 5%;
+		right: -100vw;
+		background-color: #080e2f;
+		transition: right 0.5s ease;
+		z-index: 1;	
+	}
+
+	.lista.show{
+
+		right: 0vw;
+
+	}
+
+	.analisis article{
+
+		grid-auto-flow: row dense;
+		justify-items: center;
+	}
+
+	.analisis article h1{
+
+		font-size: calc(0.8em + 1vw)
+	}
+
+	.analisis .puntuacion{
+
+		grid-column: 1;
+		grid-row: 2;
+		width: 50%;
+	}
+
+	.analisis .puntuacion h1{
+
+		font-size: calc(1.4em + 2vw);
+	}
+
+	.titulo-analisis{
+
+		text-align: center;
+		padding-top: 7%;
+	}
+
+	.puntuacion-start{
+
+		text-align: center;
+	}
+
+	.analisis2{
+
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(6, clamp(7rem, 1rem + 1vw, -2rem));
+		padding: clamp(1rem, 1rem + 2vw, 1rem) clamp(2rem, 3.2rem + 2.89vw, 2rem);
+	}
+
+	.analisis2 div .estrellas{
+
+		display: flex;
+		flex-direction: row;
+	}
+
+	.analisis2 div{
+
+		flex-direction: column;
+		padding: 0 10px;
+		gap: 5px;
+		justify-content: space-around;
+	}
+
+	.destaca-flojea{
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	.destaca-flojea div{
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	.destaca-flojea div p{
+
+		text-align: center;
+	}
+
+	.destaca-flojea div i{
+
+		padding: 3%;
+	}
+
+	.destaca-flojea h2{
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: #ffae03;
+		font-family: 'minecraft';
+		font-weight: bold;
+		font-size: calc(1em + 1vw);
+	}
+
+	.destaca-flojea .destaca{
+
+		display: none;
+	}
+
+	.destaca-flojea .flojea{
+
+		display: none;
+	}
+
+	.destaca-flojea .flojea-2{
+
+		grid-row: 8;
+		grid-column: 1;
+	}
+
+	.destaca-flojea .flojea-3{
+
+		grid-row: 7;
+		grid-column: 1;
+	}
+
+	.final .volver a{
+
+		font-size: calc(1em + 1vw);
+	}
+
+	footer{
+
+		padding: 3%;
+		justify-content: center;
+	}
+
+	footer div a video{
+
+		display: none;
+	}
+
+	footer h2{
+
+		display: none;
+	}
+
+	footer h1 a{
+
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.logofooter{
+
+		display: inline-block;
+		padding-left: 30%;
+	}
+
+	.icon-foot {
+
+		display: none;
+	}
+
+	.btn-flotante{
+
+		left: 90%;
+	}
+
+
+}
+
+  @media only screen and (max-width: 420px){
+
+  		.portada .fondo{
+
+  			display: grid;
+  			justify-content: center;
+  			justify-items: center;
+  			align-items: center;
+				grid-auto-flow: row dense;
+				grid-gap: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  		}
+
+  		.portada .fondo a{
+
+  			margin-left: 0;
+  			width: 100%;
+  		}
+
+  		.portada .fondo p{
+
+  			text-align: center;
+  		}
+
+  		.genero{
+
+  			flex-direction: column;
+  			gap: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  		}
+
+  		.genero h1,h2{
+
+				text-align: center;
+			}
+
+  		.fecha{
+
+  			flex-wrap: wrap;
+  			gap: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  		}
+
+  		.mpan{
+
+  			flex-wrap: wrap;
+  			align-items: center;
+  			justify-content: center;
+  			gap: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  		}
+
+  		.mpan div{
+
+  			flex-direction: row;
+  		}
+
+  		.boton{
+
+  			padding: clamp(2.1rem, 0rem + 1vw, 1rem) clamp(0.1rem, 2.2rem + 2.89vw, 2rem);
+  			min-width: 50%;
+  		}
+
+  		.dado h1{
+
+  			text-align: center;
+  		}
+
+  		.dado article img{
+
+  			width: 70%;
+  		}
+
+  		.analisis2{
+
+  			padding-bottom: 30%;
+  		}
+
+  		.btn-flotante{
+
+			left: 85%;
+		}
+
+  }
+
